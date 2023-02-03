@@ -17,8 +17,6 @@ describe("Winner", function () {
     
     const Caller = await hre.ethers.getContractFactory("Caller");
     const caller = await Caller.deploy(contract.address);
-    // console.log("Deploy Caller to", caller.address);
-    await caller.deployed();
     expect(caller).to.emit('Winner');
   });
   
