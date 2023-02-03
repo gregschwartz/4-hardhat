@@ -19,5 +19,5 @@ describe("Winner", function () {
     const caller = await Caller.deploy(contract.address);
     expect(caller).to.emit('Winner');
   });
-  
+
 });
