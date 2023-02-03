@@ -8,7 +8,7 @@ async function main() {
   await contract.deployed();
   console.log("Contract deployed ");
 
-  const Caller = await hre.ethers.getContractFactory("contracts/Contract.sol:Contract");
+  const Caller = await hre.ethers.getContractFactory("Caller");
   const caller = await Caller.deploy(contract.address);
   console.log("Deploy Caller to", caller.address);
   await caller.deployed();
