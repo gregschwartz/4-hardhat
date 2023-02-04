@@ -13,7 +13,6 @@ describe("Winner", function () {
   
   it("Should emit winner", async function () {
     const { Contract, contract } = await loadFixture(deployOneYearLockFixture);
-    // console.log("Deploy (base) Contract to", contract.address);
     
     const Caller = await hre.ethers.getContractFactory("Caller");
     const caller = await Caller.deploy(contract.address);
