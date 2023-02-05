@@ -19,4 +19,10 @@ describe("Winner", function () {
     expect(caller).to.emit('Winner');
   });
 
+  it("Should not emit winner", async function () {
+    const { contract } = await loadFixture(deployOneYearLockFixture);
+    
+    await expect(contract.attempt()).to.be.reverted;
+  });
+
 });
