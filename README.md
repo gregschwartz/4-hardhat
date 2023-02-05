@@ -1,14 +1,13 @@
 # Proxy to get Winner object from a contract
 
-
 ```shell
 npm install
-npx hardhat test
+touch .env
 ```
 
-That should cause output including:
+Put two things into .env: `TEST_URL` and `TEST_PRIVATE_KEY`
 
-```
-  Winner
-    ✔ Should emit winner (625ms)
+Finally, run:
+```shell
+npx hardhat test --network goerli
 ```
